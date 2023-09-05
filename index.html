@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Digital Project</title>
+    <!-- Style -->
+    <link rel="stylesheet" href="./src/css/style.css" />
+    <!-- Font Family -->
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
+    </style>
+    <!-- Alpine.js -->
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"
+    ></script>
+    <!-- Font Awesome for Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body class="font-roboto">
+    <!-- Hero -->
+    <header class="container mx-auto px-6 py-16">
+      <div
+        class="flex md:flex-row flex-col md:items-center items-start justify-between gap-6"
+      >
+        <div class="order-last md:order-none">
+          <div>
+            <p class="font-light text-5xl md:text-7xl text-[#BDBDBD]">
+              PROJECT
+            </p>
+            <p class="text-5xl md:text-7xl font-bold">Lorum</p>
+          </div>
+          <div class="mt-10 md:mt-16">
+            <div class="flex items-center gap-x-4">
+              <p
+                class="w-12 h-12 flex items-center justify-center bg-white border border-[#F2F2F2] cursor-pointer hover:bg-gray-400 transition-colors duration-200 ease-in-out hover:text-white"
+              >
+                <i class="fa-solid fa-arrow-left-long text-lg"></i>
+              </p>
+              <p
+                class="w-12 h-12 flex items-center justify-center bg-[#F9F9F9] border border-[#F2F2F2] cursor-pointer hover:bg-gray-400 transition-colors duration-200 ease-in-out hover:text-white"
+              >
+                <i class="fa-solid fa-arrow-right-long text-lg"></i>
+              </p>
+            </div>
+            <div
+              class="mt-10 flex items-center justify-start gap-x-4 text-[#BDBDBD] text-2xl font-light"
+            >
+              <p>01</p>
+              <div class="w-12 h-0.5 bg-[#E0E0E0] -rotate-45">
+                <div class=""></div>
+              </div>
+              <p>02</p>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div class="relative">
+            <img
+              src="./src/assets/img/hero.png"
+              alt="Hero Image"
+              class="h-[360px] md:h-[480px] w-[640px] lg:w-[720px] object-cover"
+            />
+            <div class="absolute left-0 bottom-0">
+              <a
+                href="#"
+                class="px-5 py-4 bg-white text-black flex items-center gap-x-4 hover:bg-gray-400 hover:text-white transition-colors ease-in-out duration-200"
+              >
+                <span class="tracking-widest">VIEW PROJECT</span>
+                <i class="fa-solid fa-arrow-right-long"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- About -->
+    <section class="container mx-auto px-6 bg-[#FBFBFB] py-16">
+      <div
+        class="grid grid-cols-1 lg:grid-cols-2 gap-x-12 gap-y-8 items-center"
+      >
+        <div class="flex justify-between gap-x-4">
+          <div class="flex-1 flex flex-col max-h-max gap-y-4">
+            <img
+              src="./src/assets/img/about-1.png"
+              alt=""
+              class="object-cover md:h-52 lg:h-auto"
+            />
+            <img
+              src="./src/assets/img/about-3.png"
+              alt=""
+              class="object-cover md:h-52 lg:h-auto"
+            />
+          </div>
+          <div class="flex-1 flex">
+            <img
+              src="./src/assets/img/about-2.png"
+              alt=""
+              class="h-[70%] grow translate-y-10 object-cover md:h-80"
+            />
+          </div>
+        </div>
+        <div>
+          <p class="text-5xl text-[#BDBDBD]">ABOUT</p>
+          <p class="mt-4 text-xl">
+            Lorem Ipsum is simply dummy text of the printing and typesetting
+            industry. Lorem Ipsum has been the industry's standard dummy text
+            ever since the 1500s, when an unknown printer took a galley of type
+            and scrambled it to make a type specimen book. It has survived not
+            only five centuries, but also the leap into electronic typesetting,
+            remaining essentially unchanged.
+          </p>
+          <div class="mt-6">
+            <a
+              href="#"
+              class="px-5 py-4 bg-white text-black inline-block hover:bg-gray-400 hover:text-white transition-colors ease-in-out duration-200 border border-black/40"
+            >
+              <span class="tracking-widest mr-4">READ MORE</span>
+              <i class="fa-solid fa-arrow-right-long"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Main Focus -->
+    <section class="container mx-auto px-6 py-16">
+      <p class="text-5xl text-[#BDBDBD]">Main Focus/Mission Statement</p>
+      <div class="mt-12 grid grid-cols-1 md:grid-cols-2 items-center gap-6">
+        <div class="flex items-center gap-x-4">
+          <p class="text-9xl text-[#F2F2F2] font-bold">1</p>
+          <p class="text-lg md:text-xl">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+            efficitur, lectus et facilisis placerat.
+          </p>
+        </div>
+        <div class="flex items-center gap-x-4">
+          <p class="text-9xl text-[#F2F2F2] font-bold">2</p>
+          <p class="text-lg md:text-xl">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+            efficitur, lectus et facilisis placerat.Lorem ipsum dolor sit amet,
+            consectetur adipiscing elit. Sed efficitur, lectus et facilisis
+            placerat, magna mauris porttitor tortor, a auctor est felis ut nisl.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Responsive Helper -->
+    <div
+      class="fixed bottom-10 right-0 h-8 w-8 bg-red-500 opacity-50 sm:bg-green-500 md:bg-sky-500 lg:bg-yellow-500 xl:bg-purple-500"
+    ></div>
+  </body>
+</html>
