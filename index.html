@@ -23,10 +23,80 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <!-- Alpine.js -->
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"
+    ></script>
   </head>
   <body class="font-roboto">
+    <!-- Navbar -->
+    <nav class="fixed top-0 inset-x-0 z-[1000] bg-white">
+      <div x-data="{mobileNav: false}">
+        <div
+          class="container mx-auto px-4 py-4 flex items-center justify-between gap-x-6"
+        >
+          <div>
+            <img src="./src/assets/img/logo-black.png" alt="Logo" />
+          </div>
+          <ul class="items-center gap-x-8 hidden md:flex">
+            <li>
+              <a href="#" class="text-xs py-0.5 px-2 border-y border-black"
+                >MAIN</a
+              >
+            </li>
+            <li>
+              <a href="#" class="text-xs py-1 px-2">GALLERY</a>
+            </li>
+            <li>
+              <a href="#" class="text-xs py-1 px-2">PROJECTS</a>
+            </li>
+            <li>
+              <a href="#" class="text-xs py-1 px-2">CERTIFICATIONS</a>
+            </li>
+            <li>
+              <a href="#" class="text-xs py-1 px-2">CONTACTS</a>
+            </li>
+          </ul>
+          <div class="md:hidden">
+            <div class="cursor-pointer p-2" x-on:click="mobileNav = !mobileNav">
+              <i
+                class="fa-solid text-lg"
+                :class="mobileNav ? 'fa-xmark' : 'fa-bars' "
+              ></i>
+            </div>
+          </div>
+          <div
+            class="origin-top absolute inset-x-0 p-5 bg-white top-[76px]"
+            x-show="mobileNav"
+            x-transition.duration.200
+          >
+            <ul class="flex flex-col items-center gap-y-8">
+              <li>
+                <a href="#" class="text-xs py-0.5 px-2 border-y border-black"
+                  >MAIN</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-xs py-1 px-2">GALLERY</a>
+              </li>
+              <li>
+                <a href="#" class="text-xs py-1 px-2">PROJECTS</a>
+              </li>
+              <li>
+                <a href="#" class="text-xs py-1 px-2">CERTIFICATIONS</a>
+              </li>
+              <li>
+                <a href="#" class="text-xs py-1 px-2">CONTACTS</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
+
     <!-- Hero -->
-    <header class="container mx-auto px-6 py-16">
+    <header class="container mx-auto px-6 pb-16 py-24">
       <div
         class="flex md:flex-row flex-col md:items-center items-start justify-between gap-6"
       >
@@ -104,13 +174,13 @@
             <img
               src="./src/assets/img/about-2.png"
               alt=""
-              class="h-[70%] grow translate-y-10 object-cover md:h-80"
+              class="h-[70%] grow translate-y-4 object-cover md:h-80"
             />
           </div>
         </div>
         <div>
-          <p class="text-5xl text-[#BDBDBD]">ABOUT</p>
-          <p class="mt-4 text-xl">
+          <p class="text-5xl text-[#BDBDBD] font-light">ABOUT</p>
+          <p class="mt-4 text-lg md:text-xl">
             Lorem Ipsum is simply dummy text of the printing and typesetting
             industry. Lorem Ipsum has been the industry's standard dummy text
             ever since the 1500s, when an unknown printer took a galley of type
@@ -133,7 +203,9 @@
 
     <!-- Main Focus -->
     <section class="container mx-auto px-6 py-16">
-      <p class="text-5xl text-[#BDBDBD]">Main Focus/Mission Statement</p>
+      <p class="text-4xl sm:text-5xl text-[#BDBDBD] font-light">
+        Main Focus/Mission Statement
+      </p>
       <div class="mt-12 grid grid-cols-1 md:grid-cols-2 items-center gap-6">
         <div class="flex items-center gap-x-4">
           <p class="text-9xl text-[#F2F2F2] font-bold">1</p>
@@ -153,6 +225,231 @@
         </div>
       </div>
     </section>
+
+    <!-- Sample Project -->
+    <section class="container mx-auto px-6 py-16">
+      <p class="text-5xl text-[#BDBDBD] font-light">Our Projects</p>
+      <div class="mt-8">
+        <div class="flex md:flex-row flex-col items-stretch gap-4">
+          <div class="grow flex relative">
+            <img src="./src/assets/img/sample-1.png" alt="" class="grow" />
+            <div
+              class="absolute text-white inset-0 bg-black/50 pl-6 lg:px-20 flex justify-center flex-col"
+            >
+              <p class="text-3xl lg:text-5xl font-bold">Sample Project</p>
+              <a href="#" class="mt-2 inline-block border border-transparent">
+                <span class="tracking-widest mr-4">VIEW MORE</span>
+                <i class="fa-solid fa-arrow-right-long"></i>
+              </a>
+            </div>
+          </div>
+          <div class="grow flex">
+            <img src="./src/assets/img/sample-2.png" alt="" class="grow" />
+          </div>
+        </div>
+        <div class="mt-6 flex items-stretch gap-4">
+          <div class="basis-[30%] flex items-stretch">
+            <img
+              src="./src/assets/img/sample-3.png"
+              alt=""
+              class="object-cover grow"
+            />
+          </div>
+          <div class="basis-[40%] flex items-stretch">
+            <img
+              src="./src/assets/img/sample-4.png"
+              alt=""
+              class="object-cover grow"
+            />
+          </div>
+          <div class="basis-[30%] flex items-stretch">
+            <img
+              src="./src/assets/img/sample-5.png"
+              alt=""
+              class="object-cover grow"
+            />
+          </div>
+        </div>
+      </div>
+      <div class="mt-8 text-end">
+        <a
+          href="#"
+          class="px-5 py-4 text-sm bg-[#333] inline-block text-white hover:bg-white hover:text-[#333] transition-colors ease-in-out duration-200 border border-black/40"
+        >
+          <span class="tracking-widest mr-4">ALL PROJECTS</span>
+          <i class="fa-solid fa-arrow-right-long"></i>
+        </a>
+      </div>
+    </section>
+
+    <!-- Contact Us -->
+    <section class="container mx-auto px-6 py-16">
+      <p class="text-5xl text-[#BDBDBD] font-light">Contact Us</p>
+      <div class="mt-8 flex items-stretch gap-x-6">
+        <div class="basis-full md:basis-1/2">
+          <div class="grid grid-cols-1 gap-y-2">
+            <div>
+              <input
+                type="text"
+                name="name"
+                id="name"
+                class="w-full py-3 px-4 bg-[#F2F2F2] focus:outline-none text-sm"
+                placeholder="Name"
+              />
+            </div>
+            <div class="relative">
+              <input
+                type="text"
+                name="phone_number"
+                id="phone_number"
+                class="w-full py-3 px-4 bg-[#F2F2F2] focus:outline-none text-sm"
+                placeholder="Phone Number"
+              />
+              <span
+                class="absolute text-red-500 -top-2.5 -left-1 text-lg pointer-events-none"
+                >*</span
+              >
+            </div>
+            <div class="relative">
+              <input
+                type="email"
+                name="email"
+                id="email"
+                class="w-full py-3 px-4 bg-[#F2F2F2] focus:outline-none text-sm"
+                placeholder="Email"
+              />
+              <span
+                class="absolute text-red-500 -top-2.5 -left-1 text-lg pointer-events-none"
+                >*</span
+              >
+            </div>
+            <div>
+              <input
+                type="text"
+                name="interested_in"
+                id="interested_in"
+                class="w-full py-3 px-4 bg-[#F2F2F2] focus:outline-none text-sm"
+                placeholder="Interested In"
+              />
+            </div>
+            <div class="relative">
+              <textarea
+                name="message"
+                id="message"
+                rows="4"
+                class="w-full py-3 px-4 bg-[#F2F2F2] focus:outline-none text-sm resize-none"
+                placeholder="Message"
+              ></textarea>
+              <span
+                class="absolute text-red-500 -top-2.5 -left-1 text-lg pointer-events-none"
+                >*</span
+              >
+            </div>
+          </div>
+        </div>
+        <div class="lg:basis-[60%] md:basis-1/2 hidden md:flex">
+          <img
+            src="./src/assets/img/contact.png"
+            alt="Contact Us"
+            class="grow object-cover"
+          />
+        </div>
+      </div>
+      <div class="mt-2">
+        <a
+          href="#"
+          class="px-5 py-4 bg-[#333] inline-block text-sm text-white hover:bg-white hover:text-[#333] transition-colors ease-in-out duration-200 border border-black/40"
+        >
+          <span class="tracking-widest mr-4">SEND EMAIL</span>
+          <i class="fa-solid fa-arrow-right-long"></i>
+        </a>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-[#2C2C2C]">
+      <div
+        class="container mx-auto px-6 pt-16 pb-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-10 gap-y-16 items-start text-white text-center lg:text-start"
+      >
+        <div>
+          <img
+            src="./src/assets/img/logo.png"
+            alt="Logo"
+            class="mx-auto lg:mx-0"
+          />
+        </div>
+        <div>
+          <p class="font-bold text-lg tracking-wide">Information</p>
+          <div class="space-y-2 mt-4">
+            <div>
+              <a href="#">Main</a>
+            </div>
+            <div>
+              <a href="#">Gallery</a>
+            </div>
+            <div>
+              <a href="#">Projects</a>
+            </div>
+            <div>
+              <a href="#">Certifications</a>
+            </div>
+            <div>
+              <a href="#">Contacts</a>
+            </div>
+          </div>
+        </div>
+        <div>
+          <p class="font-bold text-lg tracking-wide">Contacts</p>
+          <div class="mt-4 space-y-4">
+            <div
+              class="flex items-center justify-center lg:justify-start gap-x-4"
+            >
+              <i class="fa-solid fa-location-dot text-2xl"></i>
+              <div>1234 Sample Street Austin Texas 78704</div>
+            </div>
+            <div
+              class="flex items-center justify-center lg:justify-start gap-x-4"
+            >
+              <i class="fa-solid fa-phone text-2xl"></i>
+              <div>512.333.2222</div>
+            </div>
+            <div
+              class="flex items-center justify-center lg:justify-start gap-x-4"
+            >
+              <i class="fa-solid fa-envelope text-2xl"></i>
+              <div>sampleemail@gmail.com</div>
+            </div>
+          </div>
+        </div>
+        <div>
+          <p class="font-bold text-lg tracking-wide">Social Media</p>
+          <div
+            class="mt-4 flex flex-wrap justify-center lg:justify-start gap-x-8 gap-y-4"
+          >
+            <div>
+              <a href="#">
+                <i class="fa-brands fa-facebook-f text-xl"></i>
+              </a>
+            </div>
+            <div>
+              <a href="#">
+                <i class="fa-brands fa-twitter text-xl"></i>
+              </a>
+            </div>
+            <div>
+              <a href="#">
+                <i class="fa-brands fa-linkedin text-xl"></i>
+              </a>
+            </div>
+            <div>
+              <a href="#">
+                <i class="fa-brands fa-pinterest-p text-xl"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
 
     <!-- Responsive Helper -->
     <div
